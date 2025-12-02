@@ -12,6 +12,7 @@ public class GunData : ScriptableObject
     public int AmmoAmount;
     public int Magcapacity;
 
+    public float damage;
     public float reloadTime;
     public float shootRagTime;
 }

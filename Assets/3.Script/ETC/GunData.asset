@@ -16,5 +16,6 @@ MonoBehaviour:
   ReloadClip: {fileID: 8300000, guid: 9eca29ee7f8209e419470fcd586aec21, type: 3}
   AmmoAmount: 200
   Magcapacity: 30
+  damage: 10
   reloadTime: 1
   shootRagTime: 0.1

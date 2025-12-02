@@ -59,7 +59,7 @@ public class Gun : MonoBehaviour
             hitVector = hit.point;
             if(hit.collider.TryGetComponent(out IDamagable target))
             {
-                target.OnDamage(hit.point);
+                target.OnDamage(Data.damage, hit.point, hit.normal);
             }
         }
 
