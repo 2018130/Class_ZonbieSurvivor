@@ -52,6 +52,7 @@ public class Gun : MonoBehaviour
     {
         Vector3 hitVector = FireTransform.position + FireTransform.forward * distance;
         ammoCount--;
+        UIManager.Instance.SetAmmoText($"{ammoCount}/{ammoAmount}");
         lastFireTime = Time.time;
 
         if (Physics.Raycast(FireTransform.position, FireTransform.forward, out RaycastHit hit, distance))
@@ -103,6 +104,8 @@ public class Gun : MonoBehaviour
         }
         ammoAmount -= fillAmount;
         ammoCount += fillAmount;
+        UIManager.Instance.SetAmmoText($"{ammoCount}/{ammoAmount}");
+
         audioSource.PlayOneShot(Data.ReloadClip);
 
         yield return new WaitForSeconds(Data.reloadTime);

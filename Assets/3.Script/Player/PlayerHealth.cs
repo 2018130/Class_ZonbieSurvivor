@@ -57,5 +57,7 @@ public class PlayerHealth : LivingEntity
         playerShooter.enabled = false;
         hpBar.enabled = false;
         ani.SetTrigger("Die");
+
+        UIManager.Instance.ToggleGameOverUI();
     }
 }
